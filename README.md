@@ -4,7 +4,7 @@
 
 ```sh
 
-# Клогируем проект
+# Клонируем проект
 git clone https://github.com/drscat/Hi_Folks.git
 
 # Переходим в проект
