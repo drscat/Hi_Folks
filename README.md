@@ -1,6 +1,6 @@
 # Запуск
 
-** Загрузить и перейти в проект  **
+**Загрузить и перейти в проект**
 
 ```sh
 
@@ -21,7 +21,7 @@ README.md # Описание
 
 # Собираем Dockerfile
 
-** Находясь в корне проекта запускаем**
+**Находясь в корне проекта запускаем**
 
 ```sh
 docker build -t hifolks_flask_app:v0.1 flask_app/
@@ -29,7 +29,7 @@ docker build -t hifolks_flask_app:v0.1 flask_app/
 
 # Переходим в директорию prometheus и запускаем docker-compose
 
-** Выполняем **
+**Выполняем**
 ```sh
 cd prometheus/
 
@@ -41,9 +41,11 @@ docker-compose up # добавляем -d если без отладки
 
 # Grafana
 
-** В браузере набираем "IP хоста:3000" **
+**В браузере набираем "IP хоста:3000"**
 
-** Имортируем дашборды, файл "All_added_manually-1553870058244.json" **
+**В "Data Sources" добавляем prometheus и в настройках указываем URL http://prometheus:9090**
+
+**Имортируем дашборды, файл "All_added_manually-1553870058244.json"**
 
 
 <!-- docker run -d -p 5000:5000 hifolks_flask_app:v0.1
