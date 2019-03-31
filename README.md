@@ -74,14 +74,17 @@ eval $(minikube docker-env)
 # Собираем образ
 docker build -t hifolks_flask_app:v0.1 flask_app/
 
+# Переносим образ
 kubectl run hifolks-flask-app --image=hifolks_flask_app:v0.1 --port=5000
 
+# Даём доступ к сервису
 kubectl expose deployment hifolks-flask-app --type=NodePort
 
+# Проверяем
 curl $(minikube service hifolks-flask-app --url)
 ```
 
-# Должны увидеть сообщение "Hi Folks"
+**Должны увидеть сообщение "Hi Folks"**
 
 
 
