@@ -67,7 +67,6 @@ All_added_manually-1553870058244.json # Дашбоард
 flask_app/ # Dockerfile
 prometheus/ # docker-compose
 README.md # Описание
-```
 
 # Выполняем перед отправкой в Kubernetes
 eval $(minikube docker-env)
@@ -80,10 +79,12 @@ kubectl run hifolks-flask-app --image=hifolks_flask_app:v0.1 --port=5000
 kubectl expose deployment hifolks-flask-app --type=NodePort
 
 curl $(minikube service hifolks-flask-app --url)
+```
 
 # Должны увидеть сообщение "Hi Folks"
 
-```
+
+
 # Продолжение следует...
 
 
