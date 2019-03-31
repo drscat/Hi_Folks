@@ -17,6 +17,7 @@ All_added_manually-1553870058244.json # Дашбоард
 flask_app/ # Dockerfile
 prometheus/ # docker-compose
 README.md # Описание
+hifolks_flask_app_v0.1.tar.gz # Архив образа
 ```
 
 # Собираем Dockerfile
@@ -51,12 +52,15 @@ docker-compose up # добавляем -d если без отладки
 <!-- docker run -d -p 5000:5000 hifolks_flask_app:v0.1
 docker run -itd --network=prometheus_two_monitor-net -d -p 5000:5000 hifolks_flask_app:v0.1 -->
 
-# Minikube
-
-**Добавляем переменные окружения Docker для Minikube с помощью команды minikube docker-env:**
+# Файл образа docker 
 
 ```sh
+# Создан так 
+docker save -o hifolks_flask_app_v0.1.tar hifolks_flask_app:v0.1
+```
+**Сжат "gzip hifolks_flask_app_v0.1.tar" и добален в корень проекта**  
 
+```sh
 # Переходим в корень проекта
 cd ../../Hi_Folks/
 
@@ -67,7 +71,21 @@ All_added_manually-1553870058244.json # Дашбоард
 flask_app/ # Dockerfile
 prometheus/ # docker-compose
 README.md # Описание
+hifolks_flask_app_v0.1.tar.gz # Архив образа
 
+# Распаковываем архив
+gunzip hifolks_flask_app_v0.1.tar.gz
+
+# Разворачиваем в локальный кэш docker
+docker load -i hifolks_flask_app_v0.1.tar
+
+```
+
+# Minikube
+
+**Добавляем переменные окружения Docker для Minikube с помощью команды minikube docker-env:**
+
+```sh
 # Выполняем перед отправкой в Kubernetes
 eval $(minikube docker-env)
 
