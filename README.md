@@ -56,9 +56,9 @@ docker run -itd --network=prometheus_two_monitor-net -d -p 5000:5000 hifolks_fla
 
 ```sh
 # Создан так 
-docker save -o hifolks_flask_app_v0.1.tar hifolks_flask_app:v0.1
+docker save -o hifolks2_flask_app_v0.9.tar hifolks_flask_app:v0.1
 ```
-**Сжат "gzip hifolks_flask_app_v0.1.tar" и добален в корень проекта**  
+**Сжат "gzip hifolks_flask_app_vhifolks2_flask_app_v0.9.tar" и добален в корень проекта**  
 
 ```sh
 # Переходим в корень проекта
@@ -71,13 +71,13 @@ All_added_manually-1553870058244.json # Дашбоард
 flask_app/ # Dockerfile
 prometheus/ # docker-compose
 README.md # Описание
-hifolks_flask_app_v0.1.tar.gz # Архив образа
+hifolks2_flask_app_v0.9.tar.gz # Архив образа
 
 # Распаковываем архив
-gunzip hifolks_flask_app_v0.1.tar.gz
+gunzip hifolks2_flask_app_v0.9.tar.gz
 
 # Разворачиваем в локальный кэш docker
-docker load -i hifolks_flask_app_v0.1.tar
+docker load -i hifolks2_flask_app_v0.9.tar
 
 ```
 
