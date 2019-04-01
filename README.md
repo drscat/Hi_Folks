@@ -17,7 +17,7 @@ All_added_manually-1553870058244.json # Дашбоард
 flask_app/ # Dockerfile
 prometheus/ # docker-compose
 README.md # Описание
-hifolks_flask_app_v0.1.tar.gz # Архив образа
+hifolks2_flask_app_v0.9.tar.gz # Архив образа
 ```
 
 # Собираем Dockerfile
